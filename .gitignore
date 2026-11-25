@@ -1,0 +1,19 @@
+# Dependencies & build output
+node_modules/
+dist/
+dist-ssr/
+.agents/
+
+# Local & deploy artifacts
+.vercel/
+*.local
+.env
+.env.*
+
+# Editor & OS files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.DS_Store
+Thumbs.db
+*.log

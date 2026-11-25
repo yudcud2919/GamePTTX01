@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100vh;
+    background-color: #0e1c23;
+    color: #f4efe6;
+    overflow-x: hidden;
+  }
+}
+
+/* Soft Nature Winter Twilight Background */
+.winter-sky-bg {
+  background-color: #0e1c23;
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(116, 176, 150, 0.18), transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(232, 184, 109, 0.15), transparent 38%),
+    radial-gradient(circle at 50% 95%, rgba(142, 195, 207, 0.14), transparent 46%),
+    linear-gradient(180deg, #0d1a21 0%, #142832 52%, #193239 100%);
+}
+
+/* ==========================================================================
+   LIQUID GLASS DESIGN SYSTEM (Cozy Winter Frosted Refraction)
+   ========================================================================== */
+.liquid-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(22, 46, 56, 0.42) 48%,
+    rgba(14, 30, 38, 0.52) 100%
+  );
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 12px 34px rgba(5, 13, 18, 0.36),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.liquid-glass-strong {
+  background: linear-gradient(
+    145deg,
+    rgba(28, 52, 62, 0.78) 0%,
+    rgba(16, 33, 42, 0.86) 55%,
+    rgba(12, 25, 33, 0.9) 100%
+  );
+  backdrop-filter: blur(28px) saturate(175%);
+  -webkit-backdrop-filter: blur(28px) saturate(175%);
+  border: 1px solid rgba(245, 232, 205, 0.28);
+  box-shadow:
+    0 24px 60px rgba(4, 11, 16, 0.58),
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.32),
+    inset 0 -1px 2px rgba(232, 184, 109, 0.12);
+}
+
+.liquid-glass-warm {
+  background: linear-gradient(
+    135deg,
+    rgba(245, 212, 151, 0.22) 0%,
+    rgba(36, 62, 62, 0.62) 55%,
+    rgba(18, 35, 42, 0.78) 100%
+  );
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  border: 1px solid rgba(245, 212, 151, 0.42);
+  box-shadow:
+    0 16px 40px rgba(6, 14, 19, 0.48),
+    inset 0 1.5px 1px rgba(255, 248, 232, 0.42),
+    inset 0 -1px 1px rgba(232, 184, 109, 0.18);
+}
+
+.liquid-keycap {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow:
+    0 2px 0 rgba(7, 16, 22, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38);
+}
+
+/* Pixel art crisp rendering helper */
+.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Custom Liquid Glass Range Slider for BGM Volume */
+input[type='range'].glass-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.18);
+  outline: none;
+}
+
+input[type='range'].glass-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 9999px;
+  background: #f5d497;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(245, 212, 151, 0.65);
+  cursor: pointer;
+}
+
+input[type='range'].glass-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 9999px;
+  background: #f5d497;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(245, 212, 151, 0.65);
+  cursor: pointer;
+}
+
+/* Gentle Winter Frost Glitch for Easter Egg 2 */
+.frost-glitch-text {
+  position: relative;
+  text-shadow:
+    -2px 0 rgba(142, 195, 207, 0.8),
+    2px 0 rgba(224, 124, 127, 0.75);
+}
+
+.frost-glitch-layer {
+  animation: frostGlitch 2.6s infinite steps(2, end);
+}
+
+@keyframes frostGlitch {
+  0%,
+  89%,
+  100% {
+    transform: translate(0, 0);
+  }
+  91% {
+    transform: translate(-2px, 1px);
+  }
+  94% {
+    transform: translate(2px, -1px);
+  }
+  97% {
+    transform: translate(-1px, 1px);
+  }
+}
+
+/* Soft translucent scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(13, 26, 33, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(167, 212, 191, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 212, 151, 0.6);
+}
